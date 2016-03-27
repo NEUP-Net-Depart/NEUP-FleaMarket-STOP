@@ -12,18 +12,18 @@ class CreateGoodInfoTable extends Migration
      */
     public function up()
     {
-       Schema::create('good_info',function(Blueprint $table){
-        $table->increments('good_id');
-        $table->string('good_name');
-        $table->integer('cat_id');
-        $table->text('description');
-        $table->integer('pricemin');
-        $table->integer('pricemax');
-        $table->integer('type');
-        $table->integer('user_id');
-        $table->integer('couts');
-        $table->text('good_tag');
-        $table->timestamps();
+        Schema::create('good_info',function(Blueprint $table){
+            $table->increments('good_id');
+            $table->string('good_name');
+            $table->integer('cat_id');
+            $table->text('description');
+            $table->integer('pricemin');
+            $table->integer('pricemax');
+            $table->integer('type');
+            $table->integer('user_id');
+            $table->integer('couts');
+            $table->text('good_tag');
+            $table->timestamps();
       });
     }
 
@@ -34,6 +34,6 @@ class CreateGoodInfoTable extends Migration
      */
     public function down()
     {
-       Schema::drop('good_info');
+        Schema::drop('good_info');
     }
 }

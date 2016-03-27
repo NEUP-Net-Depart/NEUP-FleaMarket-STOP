@@ -12,11 +12,11 @@ class CreateGoodCatTable extends Migration
      */
     public function up()
     {
-      Schema::create('good_cat',function(Blueprint $table){
-        $table->increments('cat_id');
-        $table->string('cat_name');
-        $table->timestamps();  
-      });
+        Schema::create('good_cat',function(Blueprint $table){
+            $table->increments('cat_id');
+            $table->string('cat_name');
+            $table->timestamps();  
+        });
     }
 
     /**
@@ -26,6 +26,6 @@ class CreateGoodCatTable extends Migration
      */
     public function down()
     {
-      Schema::drop('good_cat');
+        Schema::drop('good_cat');
     }
 }
