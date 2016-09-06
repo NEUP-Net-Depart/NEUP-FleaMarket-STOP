@@ -135,3 +135,8 @@ body{
 	width:70%;
 	height:25%;
 }
+.page-content{
+	position: relative;
+	z-index: 50;
+	margin-top: 120px;
+}
