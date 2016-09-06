@@ -17,7 +17,8 @@ class UserSeeder extends Seeder
             'password' => sha1('admin'),
             'nickname' => '超级管理员',
             'email' => 'admin@admin',
-            'stuid' => '00000000'
+            'stuid' => '00000000',
+			'havecheckedemail' => 1
         ]);
         DB::table('user_info')->insert([
             'realname' => '超级管理员'
