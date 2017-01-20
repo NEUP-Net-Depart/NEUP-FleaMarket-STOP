@@ -11,8 +11,11 @@ use App\GoodInfo;
 
 class ContentController extends Controller
 {
-    public function Mainpage()
+    public function Mainpage(request $request)
     {
-        return View::make('welcome');
+        $data = [];
+        $data['hotgoods'] = GoodInfo::orderby('sold_month', 'asc')->limit(5)->get();
+        $data['newgoods'] = GoodInfo::orderby('id', 'dsc')->limit(4)->get();
+        return View::make('welcome')->with($data);
     }
 }

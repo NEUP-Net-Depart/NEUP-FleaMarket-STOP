@@ -27,33 +27,15 @@
                     </select>
                 </div>
             </div>
-            <div class="row">
-                <div class="small-2 columns">
-                    <label class="right inline">真实姓名：</label>
-                </div>
-                <div class="small-10 columns">
-                    <input type="text" name="realname">
-                </div>
-            </div>
-            <div class="row">
-                <div class="small-2 columns">
-                    <label class="right inline">手机号：</label>
-                </div>
-                <div class="small-10 columns">
-                    <input type="text" name='tel_num'>
-                </div>
-            </div>
-            <div class="row">
-                <div class="small-2 columns">
-                    <label class="right inline">地址：</label>
-                </div>
-                <div class="small-10 columns">
-                    <input type="text" name="address">
-                </div>
-            </div>
+                真实姓名：
+                <input type="text" name="realname">
+                手机号：
+                <input type="text" name='tel_num'>
+                地址：
+                <input type="text" name="address">
             {!! csrf_field() !!}
             <div>
-                <input class="button" type="submit" name="submit" value="修改">
+                <input class="btn" type="submit" name="submit" value="修改">
             </div>
         </div>
     </form>

@@ -42,7 +42,7 @@ class UserController extends Controller
                 $request->session()->put('username', $user->username);
                 $request->session()->put('nickname', $user->nickname);
 			    if($user->privilege == 2)
-				    $request->session()->put('is_admin', 1);
+				    $request->session()->put('is_admin', $user->privilege);
                 return Redirect::to('/');
             }
             else
