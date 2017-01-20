@@ -1,0 +1,59 @@
+html {
+    overflow-x: hidden;
+}
+
+.card-panel {
+    padding: 50px;
+}
+
+.nav-wrapper {
+    box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
+}
+
+nav ul a {
+    color: black;
+}
+
+.top-bar-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.top-bar-filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.25);
+    z-index: -2;
+}
+
+.top-bar-bg {
+    background-image: url('/img/pagebg.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 130%;
+    top: -5px;
+    left: -5px;
+    width: 105%;
+    -webkit-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    z-index: -2;
+}
+
+#search {
+    height: 64px;
+}
+
+.page-content {
+    position: relative;
+    margin-top: 36px;
+}

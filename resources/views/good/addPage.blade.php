@@ -14,7 +14,9 @@
 <body>
 @include('layout.header')
 <div class="page-content">
-    <div class="large-8 large-offset-2 small-10 small-offset-1 columns">
+    <div class="row">
+    <div class="m8 offset-m2 s10 offset-s1 col card-panel">
+        <br/>
         <form action="/good/add" method="POST" enctype="multipart/form-data">
             <div class="row">
                 <div class="small-2 columns">
@@ -29,7 +31,7 @@
                     <label class="right inline">商品分类:</label>
                 </div>
                 <div class="small-10 columns">
-                    <select name="cat_id">
+                    <select name="cat_id" class="browser-default">
                         @foreach($cats as $cat)
                             <option value="{{$cat->id}}">{{$cat->cat_name}}</option>
                         @endforeach
@@ -65,7 +67,7 @@
                     <label class="right inline">商品类型:</label>
                 </div>
                 <div class="small-10 columns">
-                    <select name="type">
+                    <select name="type" class="browser-default">
                         <option value="0">普通商品</option>
                         <option value="1">拍卖商品</option>
                     </select>
@@ -89,7 +91,7 @@
             </div>
             <div class="row">
                 <div class="small-4 columns">
-                    <label for="goodTitleUpload" class="button right inline">上传封面</label>
+                    <label for="goodTitleUpload" class="btn">上传封面</label>
                 </div>
                 <div id="preview" class="small-8 columns"></div>
                 <div style="display: none">
@@ -100,10 +102,7 @@
             <p></p>
             <div class="row">
                 <div class="small-2 small-offset-3 columns">
-                    <input type="submit" class="button" value="添加" style="margin: 0;"/>
-                </div>
-                <div class="small-4 columns">
-                    <a href='/good' class="button">商品列表</a>
+                    <input type="submit" class="btn" value="添加" style="margin: 0;"/>
                 </div>
             </div>
             {!! csrf_field() !!}
@@ -114,6 +113,7 @@
             {{$error}}
         @endforeach
     @endif
+    </div>
 </div>
 <script type="text/javascript">
     function preview(file)

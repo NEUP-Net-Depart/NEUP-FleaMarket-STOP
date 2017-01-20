@@ -3,25 +3,41 @@
 </head>
 <body>
 @include('layout.header')
-<div class="page-content">
     <div class="row">
-        <div class="medium-4 medium-centered small-8 small-centered columns">
+        <div class="card-panel m10 offset-m1 s10 offset-s1 col">
+            <div class="row"><div class="m4 offset-m4 s12 offset-s0 col">
+            <br/>
             @if (count($errors) > 0)
                 <label>
-                    <span class="form-error is-visible">{!! $errors->first() !!}</span>
+                    <span class="red-text">{!! $errors->first() !!}</span>
                 </label>
             @endif
-            <form action="/register" method="POST" data-abide novalidate>
-                <input type="text" name="username" placeholder="用户名（必填，3-64）">
-                <input type="password" id="password" name="password" placeholder="密码（必填，6-128）">
-                <input type="password" name="password_confirmation" placeholder="确认密码（必填）">
-                <input type="text" name="email" placeholder="邮箱（必填）">
-                <input type="text" name="nickname" placeholder="昵称（<=128）">
+            <form action="/register" method="POST" class="center-align">
+                <div class="input-field">
+                    <input type="text" name="username" length="64">
+                    <label>用户名</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="password" name="password" length="128">
+                    <label>密码</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" name="password_confirmation">
+                    <label>确认密码</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" name="email">
+                    <label>邮箱</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" name="nickname" length="128">
+                    <label>昵称</label>
+                </div>
                 {!! csrf_field() !!}
-                <input type="submit" class="button" value="注册">
+                <input type="submit" class="btn" value="注册">
             </form>
+            </div></div>
         </div>
     </div>
-</div>
 @include('layout.footer')
 @include('includes.foot')

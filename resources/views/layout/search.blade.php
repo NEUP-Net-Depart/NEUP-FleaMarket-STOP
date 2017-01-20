@@ -1,16 +1,7 @@
-<style>
-    .search-bar {
-        min-width: 300px;
-        float: right;
-    }
-</style>
-<div class="medium-3 medium-offset-9 small-11 small-centered columns search-bar">
 <form action="/good" method="GET">
-        <div class="input-group" id="top-bar-quick-access">
-            <input class="input-group-field" type="search" name="query" placeholder="开始交易吧( '﹃'⑉)"/>
-            <div class="input-group-button">
-                <input style="margin-left: 5px" type="submit" class="button" value="G♂"/>
-            </div>
-        </div>
-    </form>
-</div>
+    <div class="input-field">
+    <input id="search" type="search" name="query" placeholder="G♂!"/>
+    <label for="search"><i class="mdi-action-search"></i></label>
+    <i class="mdi-navigation-close"></i>
+    </div>
+</form>
