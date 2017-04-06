@@ -12,9 +12,9 @@ class CreateAnnouncementTable extends Migration
      */
     public function up()
     {
-        Schema::create('announcements', function (Blueprint $table) {
+        Schema::create('notices', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('title');
+            $table->string('title');
             $table->text('content');
             $table->timestamps();
         });
