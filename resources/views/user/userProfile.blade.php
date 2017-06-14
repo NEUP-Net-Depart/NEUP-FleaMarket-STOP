@@ -150,7 +150,7 @@
                                    onclick="window.location.href='/message/startConversation/{{ $user->id }}'"/>
                         </form>
                     @else
-                        <form action="/report/{{ $user->id }}" method="GET" style="bottom:0px">
+                        <form action="/report/{{ $user->id }}" method="GET" style="position:absolute;bottom:0px">
                             <input type="submit" class="btn btn-secondary" value="举报该用户">
                             <input type="button" value="和他联系" class="btn btn-secondary"
                                    onclick="window.location.href='/message/startConversation/{{ $user->id }}'"/>
