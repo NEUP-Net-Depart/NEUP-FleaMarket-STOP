@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="row">
-    <div class="col-12 col-md-6 col-lg-5 mx-auto">
+    <div class="col-12 col-md-7 col-lg-6 col-xl-5 mx-auto">
         <div class="card">
             <div class="card-header">重置密码</div>
                 <div class="card-body">
@@ -12,11 +12,11 @@
                         <form action="/passwordReset/{{ $token }}" method="POST">
                             <div class="form-group">
                                 <label for="password">新密码</label>
-                                <input type="password" name="password" class="form-control">
+                                <input type="password" name="password" id="password" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="password_confirmation">确认密码</label>
-                                <input type="password" name="password_confirmation" class="form-control">
+                                <input type="password" name="password_confirmation" id="password_confirmation" class="form-control">
                             </div>
                             {!! csrf_field() !!}
                             <div class="row">
