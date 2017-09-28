@@ -3,13 +3,13 @@
 @section('title', "登录")
 
 @section('content')
-<br/>
+<p></p>
 
-<div class="d-none d-md-block"><br/><br/><br/></div>
+<div class="d-none d-md-block"><br/></div>
 
 <div class="row">
-    <div class="d-none d-md-block col-1"></div>
-    <div class="d-none d-md-block col-5">
+    <div class="d-none d-lg-block col-1"></div>
+    <div class="d-none d-md-block col-6 col-lg-5">
         <div class="row h-100">
             <div class="col mx-auto my-auto">
                 <h2><center><b>旧很靠谱</b></center></h2>
@@ -18,7 +18,7 @@
             </div>
         </div>
     </div>
-    <div class="col col-md-5">
+    <div class="col col-md-6 col-lg-5">
         <div class="row h-100">
             <div class="col col-md-11 mx-auto my-auto">
                 <div class="card">
@@ -55,6 +55,4 @@
         </div>
     </div>
 </div>
-
-<div class="d-none d-md-block"><br/><br/><br/></div>
 @endsection
